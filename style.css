@@ -1,0 +1,51 @@
+body {
+    margin: 0 auto;
+    font-family: "Raleway", serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+}
+
+form {
+    padding-top: 4rem;
+    width: 20rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.7rem;
+}
+
+.genders {
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: flex;
+    justify-items: flex-start;
+    gap: 1.5rem;
+}
+
+button {
+    align-self: center;
+    min-width: 13rem;
+    max-width: 14rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    color:rgb(255, 253, 250);
+    background-color: rgb(28, 185, 133);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+}
+

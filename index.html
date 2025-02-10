@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Форма регистрации</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ваши данные для регистрации</h1>
+    </header>
+    <main>
+      <form name="registrationForm">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Ваше имя"
+          required
+        />
+        <span class="error" id="usernameError"></span>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваш email"
+          required
+        />
+        <span class="error" id="emailError"></span>
+
+        <input
+          type="number"
+          name="userAge"
+          id="userAge"
+          placeholder="Ваш возраст"
+          required
+        />
+        <span class="error" id="userAgeError"></span>
+
+        <fieldset class="genders">
+          <div>
+            <input type="radio" id="male" name="gender" value="male" checked />
+            <label for="male">Мужчина</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Женщина</label>
+          </div>
+        </fieldset>
+        <span></span>
+
+        <select name="jobs" id="jobsSelect" required>
+          <option value="">Выберите профессию из списка</option>
+          <option value="doctor">врач</option>
+          <option value="teacher">учитель</option>
+          <option value="engineer">инженер</option>
+          <option value="salesperson">продавец</option>
+          <option value="driver">водитель</option>
+          <option value="programmer">программист</option>
+          <option value="designer">дизайнер</option>
+          <option value="other">другое</option>
+        </select>
+        <span class="error" id="jobsError"></span>
+
+        <input
+          type="password"
+          name="userPassword"
+          id="userPassword"
+          placeholder="Создайте пароль"
+          required
+        />
+        <span class="error" id="passwordError"></span>
+        <div class="agreeTerms">
+          <input type="checkbox" name="agreeTerms" id="agreeTerms" />
+          <label for="agreeTerms">Я согласен с условиями</label>
+        </div>
+        <span class="error" id="termsError"></span>
+
+        <button type="submit" id="submitBtn">Зарегистрироваться</button>
+      </form>
+    </main>
+    <footer>2025&copy;</footer>
+  </body>
+</html>
