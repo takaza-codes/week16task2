@@ -23,6 +23,15 @@ form {
     gap: 0.7rem;
 }
 
+.error {
+    color: rgb(200, 23, 23);
+    display: none;
+}
+
+input, fieldset, select {
+    padding: 0.3rem;
+}
+
 .genders {
     padding: 0;
     margin: 0;
@@ -41,6 +50,13 @@ button {
     border-radius: 8px;
     color:rgb(255, 253, 250);
     background-color: rgb(28, 185, 133);
+    cursor: pointer;
+}
+
+.disabled {
+    border: 1px solid gray;
+    background-color:rgba(28, 185, 133, 0.403);
+    cursor: not-allowed;
 }
 
 footer {

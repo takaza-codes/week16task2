@@ -16,7 +16,7 @@
       <h1>Ваши данные для регистрации</h1>
     </header>
     <main>
-      <form name="registrationForm">
+      <form name="registrationForm" novalidate>
         <input
           type="text"
           name="username"
@@ -74,12 +74,15 @@
           name="userPassword"
           id="userPassword"
           placeholder="Создайте пароль"
+          minlength="8"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
           required
         />
         <span class="error" id="passwordError"></span>
+
         <div class="agreeTerms">
           <input type="checkbox" name="agreeTerms" id="agreeTerms" />
-          <label for="agreeTerms">Я согласен с условиями</label>
+          <label for="agreeTerms">Я согласен/согласна с условиями</label>
         </div>
         <span class="error" id="termsError"></span>
 
@@ -87,5 +90,6 @@
       </form>
     </main>
     <footer>2025&copy;</footer>
+    <script src="/index.js"></script>
   </body>
 </html>
