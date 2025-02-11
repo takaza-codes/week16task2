@@ -85,7 +85,7 @@ form.addEventListener('submit', function(evt) {
     ageInput.value = '';
     jobInput.selectedIndex = 0;
     passwordInput.value = '';
-    agreeTermsCheckbox.checked === false;
+    agreeTermsCheckbox.checked = false;
   }
 });
 
