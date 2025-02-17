@@ -30,8 +30,6 @@ function validateCheckbox() {
   }
 }
 
-agreeTermsCheckbox.addEventListener('change', validateCheckbox);
-
 form.addEventListener('submit', function(evt) {
   evt.preventDefault();
   let hasError = false;
@@ -76,18 +74,15 @@ form.addEventListener('submit', function(evt) {
         hasError = true;
     }
 
-  if (hasError === false) {
-    const userInfo = [userNameInput.value, emailInput.value, ageInput.value, genderInput.value, jobInput.value];
-    alert('Форма успешно отправлена!');
-    console.log(userInfo);
-    userNameInput.value = '';
-    emailInput.value = '';
-    ageInput.value = '';
-    jobInput.selectedIndex = 0;
-    passwordInput.value = '';
-    agreeTermsCheckbox.checked = false;
-  }
+    if (!hasError) {
+      const userInfo = [userNameInput.value, emailInput.value, ageInput.value, genderInput.value, jobInput.value];
+      alert('Форма успешно отправлена!');
+      console.log(userInfo);
+      form.reset();
+      }
 });
+
+
 
 agreeTermsCheckbox.addEventListener('change', function () {
   if (agreeTermsCheckbox.checked) {
